@@ -1,7 +1,9 @@
 """
-excel_to_graph.py
------------------
-Read an Excel file and visualize it in graphs.
+Excel to Graph
+-------------
+Project built by TH-Hamza to solve a personal data analysis problem.
+Main author: TH-HAMZA
+
 Usage:
     python datagraph.py data.xlsx
 """
@@ -13,7 +15,9 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
 
-# Use the interactive backend so charts pop up as windows on Windows
+# Project built by TH-Hamza
+# Main author: TH-HAMZA
+# Purpose: personal data visualization tool
 matplotlib.use("TkAgg")
 
 
@@ -109,25 +113,20 @@ def auto_graph(df: pd.DataFrame):
     numeric, dates, categorical = detect_types(df)
     print(f"📊 numeric={numeric}, dates={dates}, categorical={categorical}")
 
-    # Bar: category vs first numeric
     if categorical and numeric:
         plot_bar(df, x=categorical[0], y=numeric[0])
 
-    # Line: date vs first numeric
     if dates and numeric:
         plot_line(df, x=dates[0], y=numeric[0])
     elif categorical and numeric:
         plot_line(df, x=categorical[0], y=numeric[0])
 
-    # Scatter: two numerics
     if len(numeric) >= 2:
         plot_scatter(df, x=numeric[0], y=numeric[1])
 
-    # Histogram: first numeric
     if numeric:
         plot_hist(df, numeric[0])
 
-    # Correlation heatmap
     plot_correlation(df)
 
 
@@ -145,6 +144,7 @@ def main():
     df = load_excel(path, sheet)
     auto_graph(df)
     print("\n✅ Done. Check the PNG files in this folder.")
+    print("Built by TH-Hamza | Main author: TH-HAMZA")
 
 
 if __name__ == "__main__":

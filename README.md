@@ -2,6 +2,10 @@
 
 A Python project that reads an Excel file and automatically creates graphs such as bar charts, line charts, scatter plots, histograms, and correlation heatmaps.
 
+## About
+
+This project was built by **TH-Hamza** to solve a personal problem with data visualization and analysis.
+
 ## Features
 
 - Reads `.xlsx` Excel files
@@ -56,3 +60,9 @@ python datagraph.py "Leads in Eu.xlsx"
 
 - If your Excel file has spaces in the name, wrap it in quotes.
 - The script uses the `TkAgg` Matplotlib backend so graphs can appear in popup windows on Windows.
+
+---
+
+**Author**: TH-Hamza  
+**Main author**: TH-HAMZA  
+**Purpose**: Personal data visualization tool
